@@ -6,16 +6,18 @@ function App() {
 
 const [login, setLogin] = useState(false);
 
+const buttonText = login ? 'Logout' : 'Login'
+
 function loginPressed(){
   setLogin(true);
 }
 
   return (
   <>
-  <div>
+  
     <input type="text" />
-    <button onClick={loginPressed}>Login</button>
-  </div>
+    <button onClick={loginPressed}>{buttonText}</button>
+  
   </>
   )
 
